@@ -11,13 +11,23 @@ public class Main {
         Scanner inp = new Scanner(System.in);
         // int a, b;
         do{
-            System.out.print("Podaj piierwsza liczbe: ");
+            System.out.print("Podaj liczbe: ");
             int a = inp.nextInt();
             if (a == 0) break;
-            System.out.print("Podaj druga liczbe: ");
-            int b = inp.nextInt();
-            if (b == 0) break;
-            System.out.printf("%d + %d = %d %n", a, b, a + b);
+
+            System.out.printf("dec=%s\nbin=%s\nhex=%s \n".toUpperCase(),
+                    a,
+                    leftPad(Integer.toBinaryString(a), '0', 4),
+                    leftPad(Integer.toHexString(a), '0', 4));
         } while (true);
+    }
+
+    public static String leftPad(String aText, char aChar, int aWidth){
+        String result = aText;
+        for (int i = 0; i < aWidth; i += 1) {
+            result = aChar + result;
+        }
+
+        return result;
     }
 }
