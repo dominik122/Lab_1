@@ -10,6 +10,6 @@ public class Main {
         double b = 5.345;
         String s = "przykladowa zmienna tekstowa";
 
-        System.out.printf("a = %d, b = %f,  s = %s %n",a, b, s);
+        System.out.printf("a = %d, b = %.2f,  s = %.20s %n",a, b, s);
     }
 }
