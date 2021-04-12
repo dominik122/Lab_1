@@ -12,7 +12,7 @@ public class Account {
         return name;
     }
 
-    public String capitalize(String s){
+    public static String capitalize(String s){
         String[] tokens = StringUtils.split(s);
 
         for (int i = 0; i < tokens.length; i++){
