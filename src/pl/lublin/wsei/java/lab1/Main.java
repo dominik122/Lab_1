@@ -6,10 +6,19 @@ public class Main {
      * @param args argumenty funkcji main
      */
     public static void main(String[] args){
-        int a = 5;
-        double b = 5.345;
-        String s = "przykladowa zmienna tekstowa";
 
-        System.out.printf("a = %d, b = %.2f,  s = %.20s %n",a, b, s);
+        System.out.println("Nazywalismy to \"Witamina B3\"");
+
+        System.out.println("\nalfa\tsin(alfa)");
+        for (int i =0; i < 370; i += 10){
+            System.out.printf("%d\t%f\n", i, Math.sin(i/360.0*2*Math.PI));
+        }
+
+        int sum = 0;
+        System.out.println("\narg\tlog2(arg)\tsum(arg)");
+        for (int i = 1; i < 8; i *= 2){
+            sum += i;
+            System.out.printf("%d\t%.2f\t\t%d\n", i, (Math.log(i)/Math.log(2)), sum);
+        }
     }
 }
