@@ -1,24 +1,23 @@
 package pl.lublin.wsei.java.lab1;
 
+import java.util.Scanner;
+
 public class Main {
     /**
      * Funkcja main naszej klasy
      * @param args argumenty funkcji main
      */
     public static void main(String[] args){
-
-        System.out.println("Nazywalismy to \"Witamina B3\"");
-
-        System.out.println("\nalfa\tsin(alfa)");
-        for (int i =0; i < 370; i += 10){
-            System.out.printf("%d\t%f\n", i, Math.sin(i/360.0*2*Math.PI));
-        }
-
-        int sum = 0;
-        System.out.println("\narg\tlog2(arg)\tsum(arg)");
-        for (int i = 1; i < 8; i *= 2){
-            sum += i;
-            System.out.printf("%d\t%.2f\t\t%d\n", i, (Math.log(i)/Math.log(2)), sum);
-        }
+        Scanner inp = new Scanner(System.in);
+        // int a, b;
+        do{
+            System.out.print("Podaj piierwsza liczbe: ");
+            int a = inp.nextInt();
+            if (a == 0) break;
+            System.out.print("Podaj druga liczbe: ");
+            int b = inp.nextInt();
+            if (b == 0) break;
+            System.out.printf("%d + %d = %d %n", a, b, a + b);
+        } while (true);
     }
 }
