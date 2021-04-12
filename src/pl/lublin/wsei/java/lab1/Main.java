@@ -10,8 +10,7 @@ public class Main {
      * @param args argumenty funkcji main
      */
     public static void main(String[] args) {
-        Account ac = new Account();
-        ac.setName("dominik Wegiel");
-        System.out.println(ac.getName());
+        String str = Account.translit("Щитай щ Явие!");
+        System.out.println(str);
     }
 }
