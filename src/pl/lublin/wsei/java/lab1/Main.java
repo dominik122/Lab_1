@@ -6,8 +6,10 @@ public class Main {
      * @param args argumenty funkcji main
      */
     public static void main(String[] args){
-        System.out.print("Witamy\n");
-        System.out.print("w\n");
-        System.out.print("Javie\n");
+        int a = 5;
+        double b = 5.345;
+        String s = "przykladowa zmienna tekstowa";
+
+        System.out.printf("a = %d, b = %f,  s = %s %n",a, b, s);
     }
 }
