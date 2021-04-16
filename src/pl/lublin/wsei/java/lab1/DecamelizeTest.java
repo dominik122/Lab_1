@@ -1,6 +1,5 @@
 package pl.lublin.wsei.java.lab1;
 
-import org.apache.commons.lang3.StringUtils;
 import pl.lublin.wsei.java.lab1.mylib.StringFun;
 
 public class DecamelizeTest {
