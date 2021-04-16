@@ -15,4 +15,15 @@ public class StringFun {
         }
         return res;
     }
+
+    public static String camelize(String str){
+        String res = "";
+
+        String[] tokens = StringUtils.split(str, ' ');
+        res += tokens[0].toLowerCase();
+        for (int i = 1; i < tokens.length; i++){
+            res += StringUtils.capitalize(tokens[i].toLowerCase());
+        }
+        return res;
+    }
 }
