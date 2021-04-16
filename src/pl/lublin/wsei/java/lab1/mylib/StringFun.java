@@ -1,6 +1,7 @@
 package pl.lublin.wsei.java.lab1.mylib;
 
 import org.apache.commons.lang3.StringUtils;
+import java.util.Random;
 
 public class StringFun {
     public static String anarchize(String str) {
@@ -90,5 +91,19 @@ public class StringFun {
             }
         }
         return true;
+    }
+
+    public static String shuffle(String str){
+        Random random = new Random();
+        String res = "";
+
+        int end = str.length();
+        for (int i = 0; i < end; i++){
+            char pop = str.charAt(random.nextInt(str.length()));
+            res += pop;
+
+            str = StringUtils.remove(str, pop);
+        }
+       return res;
     }
 }
