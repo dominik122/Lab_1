@@ -1,6 +1,9 @@
 package pl.lublin.wsei.java.lab1.mylib;
 
 import org.apache.commons.lang3.StringUtils;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class StringFun {
@@ -94,15 +97,17 @@ public class StringFun {
     }
 
     public static String shuffle(String str){
-        Random random = new Random();
+        List<Character> characters = new ArrayList<>();
+        Random rand = new Random();
         String res = "";
 
-        int end = str.length();
-        for (int i = 0; i < end; i++){
-            char pop = str.charAt(random.nextInt(str.length()));
-            res += pop;
+        for (char c: str.toCharArray()) characters.add(c);
 
-            str = StringUtils.remove(str, pop);
+
+        for (int i = 0; i < str.length(); i++){
+            char pop = characters.remove(rand.nextInt(characters.size()));
+
+            res += pop;
         }
        return res;
     }
